@@ -4,17 +4,21 @@
 	<title>RGB to HEX</title>
 	<head>
 		<script src="script.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	</head>
 	
 	<body>
 		
 		<div id="container">
-		
-		<input type="number" id="red"></input>
-		<input type="number" id="green"></input>
-		<input type="number" id="blue"></input>
-		
-		<input type="button" id="btn" value="Get Hex Value" onclick=rgbtohex();></input>
+			<div class="input-group mb-3">
+				<input type="number" class="form-control" id="red" placeholder="Red" aria-label="Red" aria-describedby="button-addon2">
+				<input type="number" class="form-control" id="green" placeholder="Green" aria-label="Green" aria-describedby="button-addon2">
+				<input type="number" class="form-control" id="blue" placeholder="Blue" aria-label="Blue" aria-describedby="button-addon2">
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick=rgbtohex();>Get Hex</button>
+				</div>
+			</div>
+		</div>
 		
 		<p id="result"></p>
 		
