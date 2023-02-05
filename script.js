@@ -13,15 +13,23 @@ function rgbtohex() {
 	let red = +document.getElementById('red').value;
 	let green = +document.getElementById('green').value;
 	let blue = +document.getElementById('blue').value;
+  let sleep = ms => {
+  return new Promise(resolve => setTimeout(resolve, ms));
+};
 
 	if (red > 255 || green > 255 || blue > 255 || red < 0 || green < 0 || blue < 0) {
 		document.getElementById('result').innerHTML = "Please enter a number between 0 and 255";
 	} else {
 		document.getElementById('result').innerHTML = "#" + numtohex(red) + numtohex(green) + numtohex(blue);
     document.getElementById('fortest').style.backgroundColor = "#" + numtohex(red) + numtohex(green) + numtohex(blue);
-    document.getElementById('fortest').style.width = "100%";
+    document.getElementById('fortest').style.width = "0%";
+    sleep(750).then(function(){
+      document.getElementById('fortest').style.width = "100%";
+      document.getElementById('result').style.scale = "2.0";
+      document.getElementById('result').style.translateY = "-110px";
+      moveProgressBars(red,green,blue);
+    })
 	}
-	moveProgressBars(red,green,blue);
 }
 
 function moveProgressBars(redlimit, greenlimit, bluelimit) {
