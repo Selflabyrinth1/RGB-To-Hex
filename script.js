@@ -27,7 +27,6 @@ function rgbtohex() {
 		document.getElementById('result').innerHTML = "#" + numtohex(red) + numtohex(green) + numtohex(blue);
 		document.getElementById('fortest').style.width = "100%";
 		document.getElementById('result').style.scale = "2.0";
-		document.getElementById('result').style.translateY = "-110px";
 		moveProgressBars(red,green,blue);
     })
 	}
