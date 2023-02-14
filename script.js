@@ -13,7 +13,7 @@ function rgbtohex() {
 	let red = +document.getElementById('red').value;
 	let green = +document.getElementById('green').value;
 	let blue = +document.getElementById('blue').value;
-  let sleep = ms => {
+  	let sleep = ms => {
   return new Promise(resolve => setTimeout(resolve, ms));
 };
 
@@ -26,7 +26,7 @@ function rgbtohex() {
     sleep(750).then(function(){
 		document.getElementById('result').innerHTML = "#" + numtohex(red) + numtohex(green) + numtohex(blue);
 		document.getElementById('fortest').style.width = "100%";
-		document.getElementById('result').style.scale = "2.0";
+		document.getElementById('result').style.scale = "1.0";
 		moveProgressBars(red,green,blue);
     })
 	}
